@@ -1,5 +1,11 @@
-stage('Init'){
-            step{
-				echo "Init success..";	
-			}
-        }
+pipelineTriggers {
+   agent any
+
+   stages {
+      stage('Hello') {
+         steps {
+            echo 'Hello World'
+         }
+      }
+   }
+}
