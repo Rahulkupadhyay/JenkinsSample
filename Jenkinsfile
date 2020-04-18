@@ -1,7 +1,5 @@
-stages{
-        stage('Init'){
-            steps{
+stage('Init'){
+            step{
 				echo "Init success..";	
 			}
         }
-    }
