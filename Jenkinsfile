@@ -1,11 +1,7 @@
-pipeline {
-	agent any
-
-    stages{
+stages{
         stage('Init'){
             steps{
 				echo "Init success..";	
 			}
         }
     }
-}
