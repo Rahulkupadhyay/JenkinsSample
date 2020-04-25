@@ -14,7 +14,7 @@ pipeline {
         stage('Unit Test'){
             steps{
                echo "Unit test started ..."
-               bat label: '', script: ' sh ng test'
+               bat label: '', script: ' ng test'
                echo "....................... "
                echo "Unit test success..";	
 			}
