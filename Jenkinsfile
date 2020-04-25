@@ -9,30 +9,26 @@ pipeline {
                     npm install
 				'''
 				echo "....................... "
-				println "Init success..";	
+				echo "Init success..";	
 			}
         }
 
         stage('Unit Test'){
             steps{
-                echo "Unit test started ..."
-				 sh '''#!/bin/bash
-                    ng test
-				'''
-				echo "....................... "
-				println "Unit test success..";	
+               echo "Unit test started ..."
+               sh "ng test"
+               echo "....................... "
+               echo "Unit test success..";	
 			}
         }
 
         stage('Build'){
             steps{
-                echo "Build started ..."
-				 sh '''#!/bin/bash
-                    ng build --prod
-				'''
-				echo "....................... "
-				println "Build success..";	
-			}
+               echo "Build started ..."
+				   sh "ng build --prod"
+				   echo "....................... "
+				   echo "Build success..";	
+		   	}
         }
     }
 }
